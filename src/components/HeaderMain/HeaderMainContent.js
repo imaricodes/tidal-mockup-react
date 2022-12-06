@@ -5,7 +5,7 @@ const HeaderMainContent = () => {
   return (
     <div className={styles["header-main-content"]}>
       <h1 className={styles['header-title']}>For your music</h1>
-      <p>A streaming service for all music fans.</p>
+      <p className={styles['margin-top-nudge']}>A streaming service for all music fans.</p>
     </div>
   );
 };

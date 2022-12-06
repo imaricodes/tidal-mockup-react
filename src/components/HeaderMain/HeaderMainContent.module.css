@@ -1,16 +1,22 @@
 .header-main-content {
     z-index: 11;
-    max-width: 56%;
+    max-width: 45%;
     margin-right: auto;
     text-align: left;
     border: 2px solid green;
 }
 
 .header-title {
-    font-size: 5rem;
-    line-height: 6rem;
+    font-size: 6rem;
+    line-height: 6.5rem;
     font-weight: 600;
 }
+
+
+.margin-top-nudge {
+        margin-top: 1.75rem!important;
+    }
+
 
 @media (max-width: 767px) {
     .header-main-content {
@@ -21,7 +27,23 @@
         text-align: center;
         border: 2px solid green;
     }
+    
+}
+
+@media (max-width: 991px) {
+    
+    .header-main-content {
+       padding-top: 8vh;
+       padding-bottom: 10vhx;
+    }
+    
+    .header-title {
+        font-size: 5rem;
+        line-height: 6rem;
+        font-weight: 600;
+    }
 
 
+    
     
 }

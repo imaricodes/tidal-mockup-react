@@ -13,3 +13,10 @@
         border: 2px solid purple;
     }
 }
+
+@media (max-width: 991px) {
+    .media-wrapper {
+    
+        border: 2px solid blue;
+    }
+}
