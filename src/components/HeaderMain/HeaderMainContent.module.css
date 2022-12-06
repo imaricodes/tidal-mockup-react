@@ -1,0 +1,27 @@
+.header-main-content {
+    z-index: 11;
+    max-width: 56%;
+    margin-right: auto;
+    text-align: left;
+    border: 2px solid green;
+}
+
+.header-title {
+    font-size: 5rem;
+    line-height: 6rem;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .header-main-content {
+        z-index: 11;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        border: 2px solid green;
+    }
+
+
+    
+}

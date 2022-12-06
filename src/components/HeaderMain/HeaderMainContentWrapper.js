@@ -7,7 +7,7 @@ const HeaderMainContentWrapper = () => {
   return (
     //header content (has text stuff, your music etc)
     //media wrapper (has tidal image)
-    <div>
+    <div className={`${styles['wrapper']} ${styles['main-content-wrapper']}`}>
       <HeaderMainContent/>
       <HeaderMainMedia/>
       

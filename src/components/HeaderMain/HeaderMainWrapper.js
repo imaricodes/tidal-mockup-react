@@ -1,11 +1,10 @@
 import React from 'react'
 import styles from './HeaderMainWrapper.module.css'
-import HeaderMainContent from './HeaderMainContentWrapper'
 import HeaderMainContentWrapper from './HeaderMainContentWrapper'
 
 const HeaderMainWrapper = () => {
   return (
-    <div>
+    <div className={styles['header-main-wrapper']}>
         <HeaderMainContentWrapper/>
     </div>
   )

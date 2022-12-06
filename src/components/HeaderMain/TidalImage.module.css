@@ -1,0 +1,23 @@
+.hidden {
+    display: none;
+}
+
+.display-1col {
+    display: none;
+}
+
+.display-2col {
+    display: block;
+}
+
+
+
+@media (max-width: 767px) {
+    .display-1col {
+        display: block;
+    }
+    
+    .display-2col {
+        display: none;
+    }
+}

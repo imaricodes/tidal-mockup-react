@@ -1,9 +1,12 @@
 import React from 'react'
 import styles from './HeaderMainMedia.module.css'
+import TidalImage from './TidalImage'
 
 const HeaderMainMedia = () => {
   return (
-    <div>HeaderMainMediaWrapper</div>
+    <div className={styles['media-wrapper']}>
+      <TidalImage />
+    </div>
   )
 }
 

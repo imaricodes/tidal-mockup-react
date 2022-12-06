@@ -1,0 +1,15 @@
+.media-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56vw;
+    border: 2px solid purple;
+}
+
+@media (max-width: 767px) {
+    .media-wrapper {
+        position: relative;
+        width: 100%;
+        border: 2px solid purple;
+    }
+}
