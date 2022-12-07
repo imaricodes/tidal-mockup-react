@@ -1,0 +1,7 @@
+.button-strip{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* width: 100%; */
+    /* margin: -.75rem 0 0 -1.5rem; */
+    background-color: wheat;
+}
