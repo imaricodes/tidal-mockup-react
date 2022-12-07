@@ -9,8 +9,37 @@
     z-index: 50;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     background-color: transparent;
     background-color: rgba(114, 192, 11, 0.266);
+    padding: 1.2rem 1.5rem;
    
 }
+
+.header-nav--gradient-top {
+    background: linear-gradient(180deg,rgba(38,40,45,.6) 0,
+    rgba(35,37,41,.4428) 19%,
+    rgba(31,33,37,.3246) 34%,
+    rgba(27,28,32,.2292) 47%,
+    rgba(23,24,27,.1668) 56.5%,
+    rgba(19,20,22,.1164) 65%,
+    rgba(14,15,16,.0756) 73%,
+    rgba(9,10,11,.045) 80.2%,
+    rgba(6,6,7,.0252) 86.1%,
+    rgba(3,3,4,.0126) 91%,
+    rgba(1,1,1,.0048) 95.2%,
+    rgba(0,0,0,.0012) 98.2%,
+    transparent);
+
+}
+
+
+@media (min-width: 1404px) {
+
+    .header-nav {
+        padding: 1.2rem 3rem;
+    }
+
+}
+
 

@@ -5,7 +5,7 @@ import HeaderNavMenu from './HeaderNavMenu.js'
 
 const HeaderNav = () => {
   return (
-    <div className={styles['header-nav']}>
+    <div className={`${styles['header-nav']} ${styles['header-nav--gradient-top']}`}>
       <HeaderNavLogo/>
       <HeaderNavMenu/>
     </div>

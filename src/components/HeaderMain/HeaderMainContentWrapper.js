@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './HeaderMainContentWrapper.module.css'
 import HeaderMainContent from './HeaderMainContent'
 import HeaderMainMedia from './HeaderMainMedia.js'
+import GradientBottom from './GradientBottom.js'
 
 const HeaderMainContentWrapper = () => {
   return (
@@ -10,6 +11,7 @@ const HeaderMainContentWrapper = () => {
     <div className={`${styles['wrapper']} ${styles['main-content-wrapper']}`}>
       <HeaderMainContent/>
       <HeaderMainMedia/>
+      <GradientBottom />
       
       
     </div>
