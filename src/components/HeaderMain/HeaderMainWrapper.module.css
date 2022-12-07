@@ -4,6 +4,7 @@
     margin-bottom: 6rem!important;
     padding-top: 8.25rem;
     height: 81vh;
+    min-height: 100vh;
     overflow: hidden;
     /* background-color: yellow; */
 }
@@ -13,4 +14,13 @@
         padding-top: 4.5rem;
     }
 
+}
+
+@media (max-width: 1403px) {
+    .header-main-wrapper {
+     
+        margin-bottom: 6rem!important;
+        height: 720px;
+        min-height: 100vh;
+    }
 }

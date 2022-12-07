@@ -31,3 +31,12 @@
 
 
 }
+
+@media (max-width: 1403px) {
+    .main-content-wrapper {
+        padding-top: 7.5vh;
+        padding-bottom: 14vh;
+        text-align: left;
+        border: 2px solid pink;
+    }
+}
