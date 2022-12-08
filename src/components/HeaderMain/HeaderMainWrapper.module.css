@@ -1,10 +1,10 @@
 .header-main-wrapper {
     position: relative;
     background: linear-gradient(170deg,#222,#000 90%);
-    margin-bottom: 6rem!important;
+    /* margin-bottom: 6rem!important; */
     padding-top: 8.25rem;
-    height: 81vh;
-    min-height: 100vh;
+    height: 95vh;
+    /* min-height: 100vh; */
     overflow: hidden;
     /* background-color: yellow; */
 }
