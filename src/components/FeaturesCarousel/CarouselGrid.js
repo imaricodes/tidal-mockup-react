@@ -9,7 +9,7 @@ const CarouselGrid = () => {
         <GridCard />
         <GridCard />
         <GridCard />
-        <GridCard />
+        {/* <GridCard /> */}
     </div>
   )
 }
