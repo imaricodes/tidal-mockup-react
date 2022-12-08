@@ -9,9 +9,9 @@ const FeatureCard = () => {
         className={`${styles["flex-column"]} ${styles["background-image"]} `}
       >
         <h2 className={styles["heading-intermediate"]}>
-          Innovative Audio Formats
+          Innovative audio formats.
         </h2>
-        <p className={styles["heading-intermediate"]}>
+        <p className={styles["card-text"]}>
           Listen to the music exactly as the artist intended in HiFi, MQA, or
           immersive sound formats like Dolby Atmos or 360 Reality Audio.
         </p>

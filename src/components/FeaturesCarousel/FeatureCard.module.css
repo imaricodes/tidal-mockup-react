@@ -13,6 +13,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .flex-column::after {
@@ -28,14 +30,32 @@
     z-index: 1;
 }
 
-.heading-intermediate {
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin-bottom: .75rem;
-    /* color: red; */
-    z-index: 3;
+h2 {
+    font-weight: 600;
 }
 
+.heading-intermediate {
+    font-size: 1.29rem;
+    line-height: 1.5;
+    /* margin-bottom: -.75rem; */
+    z-index: 3;
+    letter-spacing: .021em;
+
+  
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.58rem;
+    z-index: 3;
+    font-weight: 200;
+    letter-spacing: .021em;
+    margin-bottom: 1.5rem;
+}
+
+.card-link {
+    z-index: 3;
+}
 
 .bg-gradient {
     background: linear-gradient(180deg,rgba(133, 12, 129, 0) 38%,#670d76 68%);
