@@ -1,9 +1,14 @@
 .grid {
-    display: grid;
-  grid-template-columns: repeat(11, auto);
-  /* grid-row-gap: 10px; */
-  grid-column-gap: 40px;
-  justify-content: space-evenly;
+  --colWidth: 436px;
+  --imageHeight: 340PX;
+  --imageWidth: 436px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--imageWidth));
+  grid-gap: 10px;
+  overflow-x: scroll;
+  padding-left: 43px;
+  grid-auto-flow: column;
+  grid-auto-columns: 436px;
   background-color: lightgray;
 }
 
