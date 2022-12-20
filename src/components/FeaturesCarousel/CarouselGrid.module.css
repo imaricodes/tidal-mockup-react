@@ -1,8 +1,14 @@
 .grid {
     display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(11, auto);
   /* grid-row-gap: 10px; */
-  /* grid-column-gap: 10px; */
+  grid-column-gap: 40px;
   justify-content: space-evenly;
   background-color: lightgray;
 }
+
+.snap-type-x-mandatory {
+  scroll-snap-type: x proximity;
+
+}
+

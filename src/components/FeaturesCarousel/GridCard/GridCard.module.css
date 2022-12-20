@@ -9,3 +9,7 @@
     border-radius: 8px;
     /* background-color: yellow; */
 }
+
+.scroll-item {
+    scroll-snap-align: center;
+}

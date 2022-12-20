@@ -8,7 +8,7 @@ const Main = () => {
     <div>
         <HeaderMainWrapper/>
         <FeaturesCarouselWrapper/>
-        <FeaturesCarouselWrapper/>
+        {/* <FeaturesCarouselWrapper/> */}
 
     </div>
   )

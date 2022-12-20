@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./FeatureCard.module.css";
 import GridCard from "./GridCard/GridCard";
+import { motion } from "framer-motion";
 
 const FeatureCard = () => {
   return (
     <GridCard>
-      <div
-        className={`${styles["flex-column"]} ${styles["background-image"]} `}
+      <motion.div
+        className={`${styles["flex-column"]} ${styles["background-image"]}`}
       >
         <h2 className={styles["heading-intermediate"]}>
           Innovative audio formats.
@@ -16,7 +17,7 @@ const FeatureCard = () => {
           immersive sound formats like Dolby Atmos or 360 Reality Audio.
         </p>
         <p className={styles["card-link"]}> Learn More</p>
-      </div>
+      </motion.div>
     </GridCard>
   );
 };

@@ -1,10 +1,15 @@
 import React from 'react'
+// import { motion } from "framer-motion";
 import CarouselGrid from './CarouselGrid.js'
 import styles from './TidalCarousel.module.css'
 
+
 const TidalCarousel = () => {
   return (
-    <CarouselGrid />
+    <div className={`${styles['width']}`} >
+    
+      <CarouselGrid />
+    </div>
   )
 }
 
