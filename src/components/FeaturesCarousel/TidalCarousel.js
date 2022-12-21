@@ -4,6 +4,8 @@ import styles from './TidalCarousel.module.css'
 
 
 const TidalCarousel = () => {
+
+
   return (
     <div className={`${styles['width']}`} >
     

@@ -1,6 +1,12 @@
 
-.background-image{
+/* .background-image{
     background-image: url('../../assets/card-img-dolby-atmos.png');
+    background-size: 60%;
+    background-position: center 3rem;
+    background-repeat: no-repeat;
+} */
+.background-image{
+    /* background-image: url('https://via.placeholder.com/346x750.png'); */
     background-size: 60%;
     background-position: center 3rem;
     background-repeat: no-repeat;
@@ -62,3 +68,30 @@ h2 {
     height: inherit;
 }
 
+
+
+/* TO ADD */
+
+.card {
+    position: relative;
+    height: 650px;
+    width: 436px;
+    border-radius: 8px;
+    /* border: 2px solid white; */
+    text-align: left;
+    background-color: #a30953;
+    border-radius: 8px;
+    /* background-color: yellow; */
+}
+
+.scroll-item-snap-align {
+    scroll-snap-align: center;
+}
+
+.grid-number1 > * {
+    --gridNumber: 0
+}
+
+.opacity-test {
+    opacity: var(--gridNumber)
+}

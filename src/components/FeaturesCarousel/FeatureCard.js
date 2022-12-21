@@ -1,23 +1,45 @@
 import React from "react";
 import styles from "./FeatureCard.module.css";
-import GridCard from "./GridCard/GridCard";
 
-const FeatureCard = () => {
+
+
+/** 
+ * //TODO: Need receive these props from GridCard.js:
+ * url for image, h2, p/text (content), p/link(content)
+ * each card will be created dynamically in the carousel grid component
+ * 
+ * 
+ */
+
+const FeatureCard = props => {
+
   return (
-    <GridCard>
+    <div className={ ` ${styles["card"]} ${styles["scroll-item-snap-align"]}`}
+   
+
+    >
       <div
-        className={`${styles["flex-column"]} ${styles["background-image"]}`}
+        className={`
+        ${styles["flex-column"]} 
+        ${styles["background-image"]}
+        `}
+
+        // style={
+        //   {backgroundImage: 'url("https://via.placeholder.com/346x750.png")'  }
+        // }
+
+        style = {{'--grid-number': {props.gridNumber}}}
       >
-        <h2 className={styles["heading-intermediate"]}>
-          Innovative audio formats.
+        <h2 className={`${styles["heading-intermediate"]}
+        `}>
+          {props.header}
         </h2>
         <p className={styles["card-text"]}>
-          Listen to the music exactly as the artist intended in HiFi, MQA, or
-          immersive sound formats like Dolby Atmos or 360 Reality Audio.
+          {props.bodyText}
         </p>
-        <p className={styles["card-link"]}> Learn More</p>
+        <p className={styles["card-link"]}> {props.linkText}</p>
       </div>
-    </GridCard>
+    </div>
   );
 };
 
