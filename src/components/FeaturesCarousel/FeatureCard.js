@@ -14,8 +14,11 @@ import styles from "./FeatureCard.module.css";
 const FeatureCard = props => {
 
   return (
-    <div className={ ` ${styles["card"]} ${styles["scroll-item-snap-align"]}`}
-  
+    <div className={ ` ${styles["card"]} ${styles["scroll-item-snap-align"]} ${styles["card-columm-grid"]}`}
+
+     style={
+          {'--grid-number': props.gridNumber,  }
+        }
     >
       <div
         className={`
@@ -23,20 +26,22 @@ const FeatureCard = props => {
         ${styles["background-image"]}
         `}
 
-        // style={
-        //   {backgroundImage: 'url("https://via.placeholder.com/346x750.png")'  }
-        // }
+       
 
-        style = {{'--grid-number': props.gridNumber}}
+        style = {{ backgroundImage: 'url("https://via.placeholder.com/346x750.png")' } }
       >
-        <h2 className={`${styles["heading-intermediate"]}
+        <h2 className={`${styles["heading-intermediate"]} ${styles["card-header-grid"]}
+        
         `}>
           {props.header}
         </h2>
-        <p className={styles["card-text"]}>
+        <p className={`${styles["card-text"]} ${styles["card-body-text-grid"]}
+        `}>
           {props.bodyText}
         </p>
-        <p className={styles["card-link"]}> {props.linkText}</p>
+        <p className={`${styles["card-link"]} ${styles["card-link-text-grid"]}
+        
+        `}> {props.linkText}</p>
       </div>
     </div>
   );
