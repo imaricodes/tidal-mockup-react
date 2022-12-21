@@ -88,10 +88,21 @@ h2 {
     scroll-snap-align: center;
 }
 
-.grid-number1 > * {
-    --gridNumber: 0
+.card-columm-grid{
+    grid-column: var(--gridNumber)/var(--gridNumber)
 }
 
-.opacity-test {
-    opacity: var(--gridNumber)
+.card-header-grid{
+    grid-column: var(--gridNumber)/var(--gridNumber);
+    grid-row: var(--gridNumber)/2;
+}
+
+.card-body-text-grid{
+    grid-column: var(--gridNumber)/var(--gridNumber);
+    grid-row: var(--gridNumber)/3;
+}
+
+.card-link-text-grid{
+    grid-column: var(--gridNumber)/var(--gridNumber);
+    grid-row: var(--gridNumber)/4;
 }
