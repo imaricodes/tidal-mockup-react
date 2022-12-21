@@ -28,7 +28,7 @@ const FeatureCard = props => {
         //   {backgroundImage: 'url("https://via.placeholder.com/346x750.png")'  }
         // }
 
-        style = {{'--grid-number': {props.gridNumber}}}
+        style = {{'--grid-number': props.gridNumber}}
       >
         <h2 className={`${styles["heading-intermediate"]}
         `}>
