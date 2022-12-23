@@ -11,11 +11,12 @@
   grid-auto-columns: 436px;
   background-color: lightgray;
 
-  /* grid-template-rows: repeat(4, auto) */
+  grid-template-rows:450px repeat(3, 125px)
 }
 
 .snap-type-x-mandatory {
   scroll-snap-type: x mandatory;
+  margin-bottom: 100px;
 
 }
 

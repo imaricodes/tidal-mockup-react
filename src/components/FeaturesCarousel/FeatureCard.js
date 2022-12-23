@@ -17,7 +17,7 @@ const FeatureCard = props => {
     <div className={ ` ${styles["card"]} ${styles["scroll-item-snap-align"]} ${styles["card-columm-grid"]}`}
 
      style={
-          {'--grid-number': props.gridNumber,  }
+          {'--gridNumber': props.gridNumber,  }
         }
     >
       <div
