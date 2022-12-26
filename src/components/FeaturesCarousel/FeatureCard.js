@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./FeatureCard.module.css";
+import FeatureCardFlexColumns from "./FeatureCardFlexColumns";
 
 
 
@@ -11,38 +12,13 @@ import styles from "./FeatureCard.module.css";
  * 
  */
 
-const FeatureCard = props => {
+const FeatureCard = () => {
 
   return (
-    <div className={ ` ${styles["card"]} ${styles["scroll-item-snap-align"]} ${styles["card-columm-grid"]}`}
-
-     style={
-          {'--gridNumber': props.gridNumber,  }
-        }
+    <div className={`${styles["display-contents"]}`}
+    style = {{backgroundColor: 'red'}}
     >
-      <div
-        className={`
-        ${styles["flex-column"]} 
-        ${styles["background-image"]}
-        `}
-
-       
-
-        style = {{ backgroundImage: 'url("https://via.placeholder.com/346x750.png")' } }
-      >
-        <h2 className={`${styles["heading-intermediate"]} ${styles["card-header-grid"]}
-        
-        `}>
-          {props.header}
-        </h2>
-        <p className={`${styles["card-text"]} ${styles["card-body-text-grid"]}
-        `}>
-          {props.bodyText}
-        </p>
-        <p className={`${styles["card-link"]} ${styles["card-link-text-grid"]}
-        
-        `}> {props.linkText}</p>
-      </div>
+      <FeatureCardFlexColumns />
     </div>
   );
 };

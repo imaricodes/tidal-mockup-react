@@ -1,17 +1,13 @@
-import React from 'react'
-import CarouselGrid from './CarouselGrid.js'
-import styles from './TidalCarousel.module.css'
-
+import React from "react";
+import TidalCarouselWrapper from "./TidalCarouselWrapper";
+import styles from "./TidalCarouselWrapper.module.css";
 
 const TidalCarousel = () => {
-
-
   return (
-    <div className={`${styles['width']}`} >
-    
-      <CarouselGrid />
+    <div>
+      <TidalCarouselWrapper />
     </div>
-  )
-}
+  );
+};
 
-export default TidalCarousel
+export default TidalCarousel;
