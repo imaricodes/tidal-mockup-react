@@ -1,0 +1,12 @@
+.scroll-snap-align-center {
+    scroll-snap-align: center;
+}
+
+.display-contents {
+    display: contents;
+}
+
+.grid-column {
+    grid-column: var(--gridNumber)/var(--gridNumber)
+}
+

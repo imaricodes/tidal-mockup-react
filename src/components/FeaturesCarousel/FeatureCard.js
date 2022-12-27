@@ -12,13 +12,12 @@ import FeatureCardFlexColumns from "./FeatureCardFlexColumns";
  * 
  */
 
-const FeatureCard = () => {
+const FeatureCard = ({card}) => {
 
   return (
-    <div className={`${styles["display-contents"]}`}
-    style = {{backgroundColor: 'red'}}
+    <div className={styles["display-contents"]}
     >
-      <FeatureCardFlexColumns />
+      <FeatureCardFlexColumns {...{card}} />
     </div>
   );
 };

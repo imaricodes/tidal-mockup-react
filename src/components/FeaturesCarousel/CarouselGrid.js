@@ -7,16 +7,24 @@ const CarouselGrid = () => {
   const [cards, setCards] = useContext(CardContext);
 
 
+ console.log(`new cards ${cards}`)
 
   return (
+
+   
     <div
       className={`${styles["grid"]} ${styles["snap-type-x-mandatory"]} ${styles["flex-column"]}`}
     >
-      {cards.map((card, index) => (
       
-          <FeatureCardWrapper key={index} gridNumber={card.gridNumber} />
   
-      ))}
+      {
+      cards.map((card, index) => (
+        
+          <FeatureCardWrapper key={index} {...{ card }} />
+        ))
+      
+      }
+
     </div>
   );
 };
