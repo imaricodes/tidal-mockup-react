@@ -1,5 +1,7 @@
 .background-image {
     /* background-image: url('https://via.placeholder.com/346x750.png'); */
+
+    background-image: url('../../assets/card-img-dolby-atmos.png');
     background-size: 60%;
     background-position: center 3rem;
     background-repeat: no-repeat;

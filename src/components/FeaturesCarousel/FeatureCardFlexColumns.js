@@ -21,9 +21,9 @@ const FeatureCardFlexColumns = ({card}) => {
         
         ${styles["background-image"]} ${styles["card-card-background-color"]} ${styles["carousel-slide"]} ${styles["background"]} ${styles["scroll-item-snap-align-center"]}
         `}
-        style={{
-          backgroundImage: 'url("https://via.placeholder.com/346x750.png")',
-        }}
+        // style={{
+        //   backgroundImage: 'url("https://via.placeholder.com/346x750.png")',
+        // }}
       ></div>
 
       <h2
