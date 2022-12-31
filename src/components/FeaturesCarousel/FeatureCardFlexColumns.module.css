@@ -28,26 +28,40 @@
     height: 650px;
     width: 436px;
     text-align: left;
-    background-color: #a30953;
-    border-radius: 8px;
-    background-color: yellow;
 
 }
 
-.card>* {
+.card > * {
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
+.card .background {
+    background-color: #a30953;
+    border-radius: 8px;
+}
+
+/* gradient black overlay over card image, z index 1*/
 .card .background::before {
 
     opacity: .15;
     background: #000;
     transition: opacity .2s cubic-bezier(.4, 0, 1, 1);
     z-index: 1;
-    grid-column: 1/2
+    grid-column: var(--gridNumber)/span 1;
+
+
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
 }
 
+
+/* gradient color overlay over card image, no z index */
 .card .background::after {
     content: "";
     border-radius: 11px;
@@ -59,35 +73,15 @@
     transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1);
     --box-shadow-color: 255, 110, 85;
     background: linear-gradient(180deg, rgba(82, 4, 4, 0) 38%, #730404 68%);
-    grid-column: 1/2;
-
-    --box-shadow-color: 255, 110, 85;
-    background: linear-gradient(180deg, rgba(82, 4, 4, 0) 38%, #730404 68%);
-
     grid-column: var(--gridNumber)/span 1;
 }
 
-.card .background::before {
-    --box-shadow-color: 255, 110, 85;
-    background: linear-gradient(180deg, rgba(82, 4, 4, 0) 38%, #730404 68%);
-}
 
 .card-background-color {
     background-color: #ad183c;
 }
 
-/* .flex-column::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(133, 12, 129, 0) 38%, #670d76 68%);
-    opacity: .7;
-    background-image: linear-gradient(rgba(133, 12, 128, 0) 38%, rgb(103, 13, 118) 68%);
-    z-index: 1;
-} */
+
 
 .display-contents {
     display: contents;

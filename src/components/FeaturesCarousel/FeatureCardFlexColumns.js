@@ -1,10 +1,10 @@
-import React, {useContext} from "react";
+import React from "react";
 
 import styles from "./FeatureCardFlexColumns.module.css";
-import { CardContext } from './CardContext/CardContext'
+// import { CardContext } from './CardContext/CardContext'
 
 const FeatureCardFlexColumns = ({card}) => {
-  const [cards, setCards] = useContext(CardContext);
+  // const [cards, setCards] = useContext(CardContext);
 
 
 
@@ -18,8 +18,11 @@ const FeatureCardFlexColumns = ({card}) => {
       <div
         className={`
         ${styles["card-columm-grid"]}
-        
-        ${styles["background-image"]} ${styles["card-card-background-color"]} ${styles["carousel-slide"]} ${styles["background"]} ${styles["scroll-item-snap-align-center"]}
+        ${styles["background-image"]} 
+        ${styles["card-card-background-color"]} 
+        ${styles["carousel-slide"]} 
+        ${styles["background"]} 
+        ${styles["scroll-item-snap-align-center"]}
         `}
         // style={{
         //   backgroundImage: 'url("https://via.placeholder.com/346x750.png")',
