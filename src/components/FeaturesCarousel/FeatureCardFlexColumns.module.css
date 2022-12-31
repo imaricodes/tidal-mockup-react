@@ -1,7 +1,4 @@
 .background-image {
-    /* background-image: url('https://via.placeholder.com/346x750.png'); */
-
-    background-image: url('../../assets/card-img-dolby-atmos.png');
     background-size: 60%;
     background-position: center 3rem;
     background-repeat: no-repeat;
@@ -31,26 +28,18 @@
 
 }
 
-.card > * {
+.card>* {
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
 .card .background {
-    background-color: #a30953;
-    border-radius: 8px;
+    /* background-color: #a30953; */
+    /* border-radius: 8px; */
 }
 
-/* gradient black overlay over card image, z index 1*/
-.card .background::before {
-
-    opacity: .15;
-    background: #000;
-    transition: opacity .2s cubic-bezier(.4, 0, 1, 1);
-    z-index: 1;
-    grid-column: var(--gridNumber)/span 1;
-
-
+.card .background::before,
+.card .background::after {
     content: "";
     border-radius: 10px;
     position: absolute;
@@ -58,28 +47,34 @@
     bottom: -1px;
     left: 0;
     width: 100%;
+    grid-column: var(--gridNumber)/span 1;
+
+}
+
+/* gradient black overlay over card image, z index 1*/
+.card .background::before {
+    opacity: .15;
+    background: #000;
+    transition: opacity .2s cubic-bezier(.4, 0, 1, 1);
+    z-index: 1;
+    /* grid-column: var(--gridNumber)/span 1; */
+
+
+
 }
 
 
 /* gradient color overlay over card image, no z index */
 .card .background::after {
-    content: "";
-    border-radius: 11px;
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
+    /* --box-shadow-color: 72,72,72; */
     transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1);
-    --box-shadow-color: 255, 110, 85;
-    background: linear-gradient(180deg, rgba(82, 4, 4, 0) 38%, #730404 68%);
-    grid-column: var(--gridNumber)/span 1;
+
 }
 
 
-.card-background-color {
+/* .card-background-color {
     background-color: #ad183c;
-}
+} */
 
 
 
@@ -115,10 +110,10 @@ h2 {
     z-index: 3;
 }
 
-.bg-gradient {
+/* .bg-gradient {
     background: linear-gradient(180deg, rgba(133, 12, 129, 0) 38%, #670d76 68%);
     height: inherit;
-}
+} */
 
 /* TO ADD */
 
@@ -145,4 +140,105 @@ h2 {
 .card-link-text-grid {
     grid-column: var(--gridNumber);
     grid-row: 4;
+}
+
+
+/* unique card selectors */
+
+/* 
+background color
+background image
+color overlay
+
+classes: songs, audio, listens, devices, mixes, playlists, videos
+*/
+
+/* card background color */
+.card .audio {
+    background-color: #a30953;
+    background-image: url('../../assets/card-img-dolby-atmos.png');
+}
+
+/* color gradient over image */
+.card .audio::after {
+    --box-shadow-color: 200, 10, 220;
+    background: linear-gradient(180deg, rgba(133, 12, 128, 0) 38%, #670d76 68%);
+    ;
+}
+
+.card .songs {
+    background-color: #ad183c;
+    background-image: url('../../assets/card-img-songs.png');
+}
+
+/* color gradient over image */
+.card .songs::after {
+    --box-shadow-color: 200, 10, 220;
+    background: linear-gradient(180deg,rgba(82,4,4,0) 38%,#730404 68%);
+    ;
+}
+
+.card .listens {
+    background-color: #430fb1;
+    background-size: 140%;
+    background-position: top;
+    background-image: url('../../assets/listens-bg.svg');
+}
+
+/* color gradient over image */
+.card .listens::after {
+    --box-shadow-color: 33,150,240;
+    background: linear-gradient(180deg,rgba(51,30,111,0) 38%,#0e2883 68%);
+    ;
+}
+
+.card .devices {
+    background-color: #074cb4;
+    background-size: 120%;
+    background-position-x: 180%;
+    background-position-y: 25%;
+    background-image: url('../../assets/card-img-devices.png');
+}
+
+/* color gradient over image */
+.card .devices::after {
+    --box-shadow-color: 80,150,240;
+    background: linear-gradient(180deg,rgba(33,48,126,0) 38%,#024d6c 68%);
+}
+
+
+.card .mixes {
+    background-color: #ad631e;
+    background-image: url('../../assets/card-img-mixes.png');
+}
+
+/* color gradient over image */
+.card .mixes::after {
+    --box-shadow-color: 173,99,30;
+    background: linear-gradient(180deg,rgba(138,58,13,0) 38%,#7d260b 68%);
+}
+
+
+.card .playlists {
+    background-color: #a30953;
+    background-image: url('../../assets/card-img-playlists.png');
+}
+
+/* color gradient over image */
+.card .playlists::after {
+    --box-shadow-color: 210,26,240;
+    background: linear-gradient(180deg,rgba(133,12,128,0) 38%,#670d76 68%);
+}
+
+.card .videos {
+    background-color: #430fb1;
+    background-size: 140%;
+    background-position-y: 2rem;
+    background-image: url('../../assets/card-img-videos.png');
+}
+
+/* color gradient over image */
+.card .videos::after {
+    --box-shadow-color: 33,150,240;
+    background: linear-gradient(180deg,rgba(51,30,111,0) 30%,#0e2883 68%);
 }

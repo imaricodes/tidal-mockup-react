@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./FeatureCardFlexColumns.module.css";
+import cardstyles from "./FeatureCardFlexColumnsCard.module.css";
 // import { CardContext } from './CardContext/CardContext'
 
 const FeatureCardFlexColumns = ({card}) => {
@@ -13,13 +14,20 @@ const FeatureCardFlexColumns = ({card}) => {
 
   return (
     <div
-      className={` ${styles["card"]} ${styles["scroll-item-snap-align-center"]}  ${styles["display-contents"]} ${styles["flex-column"]}`}
+      className={` 
+      ${styles["card"]} 
+      ${styles["scroll-item-snap-align-center"]}  
+      ${styles["display-contents"]} 
+      ${styles["flex-column"]}
+      
+      `}
     >
       <div
         className={`
         ${styles["card-columm-grid"]}
-        ${styles["background-image"]} 
-        ${styles["card-card-background-color"]} 
+        ${styles["background-image"]}
+        ${styles["videos"]} 
+       
         ${styles["carousel-slide"]} 
         ${styles["background"]} 
         ${styles["scroll-item-snap-align-center"]}
