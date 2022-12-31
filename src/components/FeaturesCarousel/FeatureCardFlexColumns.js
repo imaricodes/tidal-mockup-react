@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import styles from "./FeatureCardFlexColumns.module.css";
 import cardstyles from "./FeatureCardFlexColumnsCard.module.css";
-// import { CardContext } from './CardContext/CardContext'
 
-const FeatureCardFlexColumns = ({card}) => {
-  // const [cards, setCards] = useContext(CardContext);
+const FeatureCardFlexColumns = ({ card }) => {
+  const cardRef = useRef();
 
-
-
-
-
+  useEffect(() => {
+    cardRef.current.classList.add(styles[`${card.class}`]);
+    console.log(cardRef.current);
+  }, []);
 
   return (
     <div
@@ -23,32 +22,27 @@ const FeatureCardFlexColumns = ({card}) => {
       `}
     >
       <div
+        ref={cardRef}
         className={`
         ${styles["card-columm-grid"]}
         ${styles["background-image"]}
-        ${styles["videos"]} 
-       
         ${styles["carousel-slide"]} 
         ${styles["background"]} 
         ${styles["scroll-item-snap-align-center"]}
         `}
-        // style={{
-        //   backgroundImage: 'url("https://via.placeholder.com/346x750.png")',
-        // }}
       ></div>
 
       <h2
         className={`${styles["heading-intermediate"]} ${styles["card-header-grid"]}
         `}
-      
       >
-      {card.header}
+        {card.header}
       </h2>
       <p
         className={`${styles["card-text"]} ${styles["card-body-text-grid"]}
         `}
       >
-       {card.bodyText}
+        {card.bodyText}
       </p>
       <p
         className={`${styles["card-link"]} ${styles["card-link-text-grid"]}
@@ -56,7 +50,6 @@ const FeatureCardFlexColumns = ({card}) => {
         `}
       >
         {card.linkText}
-        
       </p>
     </div>
   );
