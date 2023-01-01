@@ -15,7 +15,7 @@ const CarouselGrid = () => {
     <div
       className={`${styles["grid"]} ${styles["snap-type-x-mandatory"]} ${styles["flex-column"]}`}
     >
-      
+      <p>goodbye</p>
   
       {
       cards.map((card, index) => (
