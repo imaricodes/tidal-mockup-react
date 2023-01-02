@@ -7,8 +7,6 @@ const CarouselGrid = () => {
   const [cards, setCards] = useContext(CardContext);
 
 
- console.log(`new cards ${cards}`)
-
   return (
 
    

@@ -1,7 +1,6 @@
 .grid {
   --colWidth: 436px;
-  --imageHeight: 512px;
-  /* --imageWidth: 436px; */
+  --imageHeight: 453px;
   display: grid;
   grid-template-columns: repeat(auto-fill, var(--colWidth));
   grid-gap: 10px;

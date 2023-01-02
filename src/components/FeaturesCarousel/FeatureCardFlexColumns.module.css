@@ -1,3 +1,69 @@
+/***** UTILITIES ******/
+.display-contents {
+    display: contents;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+
+/***** CARD ******/
+
+.card {
+    position: relative;
+    height: 650px;
+    width: 436px;
+    text-align: left;
+
+}
+
+.card > * {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/*
+Position
+*/
+.card .background::before,
+.card .background::after {
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    grid-column: var(--gridNumber)/span 1;
+
+}
+
+/* gradient black overlay over all cards, z index 1*/
+.card .background::before {
+    opacity: .15;
+    background: #000;
+    transition: opacity .2s cubic-bezier(.4, 0, 1, 1);
+    z-index: 1;
+}
+
+
+/* gradient color overlay over card image, no z index */
+.card .background::after {
+    /* --box-shadow-color: 72,72,72; */
+    transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1);
+
+}
+
 .background-image {
     background-size: 60%;
     background-position: center 3rem;
@@ -20,73 +86,12 @@
     padding-right: 1.5rem;
 }
 
-.card {
-    position: relative;
-    height: 650px;
-    width: 436px;
-    text-align: left;
-
-}
-
-.card>* {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.card .background {
-    /* background-color: #a30953; */
-    /* border-radius: 8px; */
-}
-
-.card .background::before,
-.card .background::after {
-    content: "";
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    grid-column: var(--gridNumber)/span 1;
-
-}
-
-/* gradient black overlay over card image, z index 1*/
-.card .background::before {
-    opacity: .15;
-    background: #000;
-    transition: opacity .2s cubic-bezier(.4, 0, 1, 1);
-    z-index: 1;
-    /* grid-column: var(--gridNumber)/span 1; */
 
 
 
-}
 
 
-/* gradient color overlay over card image, no z index */
-.card .background::after {
-    /* --box-shadow-color: 72,72,72; */
-    transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1);
-
-}
-
-
-/* .card-background-color {
-    background-color: #ad183c;
-} */
-
-
-
-.display-contents {
-    display: contents;
-}
-
-h2 {
-    font-weight: 600;
-}
-
-.heading-intermediate {
+.card-heading {
     font-size: 1.29rem;
     line-height: 1.5;
     /* margin-bottom: -.75rem; */
@@ -110,21 +115,20 @@ h2 {
     z-index: 3;
 }
 
-/* .bg-gradient {
-    background: linear-gradient(180deg, rgba(133, 12, 129, 0) 38%, #670d76 68%);
-    height: inherit;
-} */
-
-/* TO ADD */
-
 
 
 .scroll-item-snap-align-center {
     scroll-snap-align: center;
 }
 
+
 .card-columm-grid {
     grid-column: var(--gridNumber);
+}
+
+.card-listens-image-wrapper-grid {
+    grid-column: var(--gridNumber);
+    grid-row: 1;
 }
 
 .card-header-grid {
@@ -145,13 +149,6 @@ h2 {
 
 /* unique card selectors */
 
-/* 
-background color
-background image
-color overlay
-
-classes: songs, audio, listens, devices, mixes, playlists, videos
-*/
 
 /* card background color */
 .card .audio {
@@ -174,7 +171,7 @@ classes: songs, audio, listens, devices, mixes, playlists, videos
 /* color gradient over image */
 .card .songs::after {
     --box-shadow-color: 200, 10, 220;
-    background: linear-gradient(180deg,rgba(82,4,4,0) 38%,#730404 68%);
+    background: linear-gradient(180deg, rgba(82, 4, 4, 0) 38%, #730404 68%);
     ;
 }
 
@@ -187,8 +184,8 @@ classes: songs, audio, listens, devices, mixes, playlists, videos
 
 /* color gradient over image */
 .card .listens::after {
-    --box-shadow-color: 33,150,240;
-    background: linear-gradient(180deg,rgba(51,30,111,0) 38%,#0e2883 68%);
+    --box-shadow-color: 33, 150, 240;
+    background: linear-gradient(180deg, rgba(51, 30, 111, 0) 38%, #0e2883 68%);
     ;
 }
 
@@ -202,8 +199,8 @@ classes: songs, audio, listens, devices, mixes, playlists, videos
 
 /* color gradient over image */
 .card .devices::after {
-    --box-shadow-color: 80,150,240;
-    background: linear-gradient(180deg,rgba(33,48,126,0) 38%,#024d6c 68%);
+    --box-shadow-color: 80, 150, 240;
+    background: linear-gradient(180deg, rgba(33, 48, 126, 0) 38%, #024d6c 68%);
 }
 
 
@@ -214,8 +211,8 @@ classes: songs, audio, listens, devices, mixes, playlists, videos
 
 /* color gradient over image */
 .card .mixes::after {
-    --box-shadow-color: 173,99,30;
-    background: linear-gradient(180deg,rgba(138,58,13,0) 38%,#7d260b 68%);
+    --box-shadow-color: 173, 99, 30;
+    background: linear-gradient(180deg, rgba(138, 58, 13, 0) 38%, #7d260b 68%);
 }
 
 
@@ -226,8 +223,8 @@ classes: songs, audio, listens, devices, mixes, playlists, videos
 
 /* color gradient over image */
 .card .playlists::after {
-    --box-shadow-color: 210,26,240;
-    background: linear-gradient(180deg,rgba(133,12,128,0) 38%,#670d76 68%);
+    --box-shadow-color: 210, 26, 240;
+    background: linear-gradient(180deg, rgba(133, 12, 128, 0) 38%, #670d76 68%);
 }
 
 .card .videos {
@@ -239,6 +236,26 @@ classes: songs, audio, listens, devices, mixes, playlists, videos
 
 /* color gradient over image */
 .card .videos::after {
-    --box-shadow-color: 33,150,240;
-    background: linear-gradient(180deg,rgba(51,30,111,0) 30%,#0e2883 68%);
+    --box-shadow-color: 33, 150, 240;
+    background: linear-gradient(180deg, rgba(51, 30, 111, 0) 30%, #0e2883 68%);
+}
+
+
+
+.tidal-image-wrapper {
+    padding: 0px;
+    margin: auto;
+    /* z-index: 3; */
+    /* max-width: 66%; */
+    max-height: 100%;
+    border: 2px solid yellow;
+    margin-top: 7rem;
+}
+
+.tidal-image-wrapper img {
+    border-style: none;
+    max-height: inherit;
+    max-width: 75%;
+    margin: auto;
+
 }

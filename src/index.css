@@ -31,6 +31,22 @@ body {
 
 }
 
+.baseline-flow,
+.form-select-wrapper,
+blockquote,
+dd,
+fieldset,
+figure,
+input,
+ol,
+p,
+small,
+table,
+textarea,
+ul {
+  margin-bottom: 1.5rem;
+}
+
 
 img,
 picture,
@@ -39,4 +55,3 @@ video {
   display: block;
   max-width: 100%;
 }
-
